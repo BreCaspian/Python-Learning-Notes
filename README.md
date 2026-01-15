@@ -28,17 +28,18 @@
 ```mermaid
 %%{init: {
   "theme": "base",
+  "themeVariables": {
+    "background": "transparent",
+    "fontFamily": "Inter, PingFang SC, Microsoft YaHei, Arial",
+    "fontSize": "20px",
+    "lineColor": "#546E7A",
+    "textColor": "#263238"
+  },
   "flowchart": {
     "curve": "linear",
     "nodeSpacing": 30,
     "rankSpacing": 42,
     "padding": 10
-  },
-  "themeVariables": {
-    "fontFamily": "Inter, PingFang SC, Microsoft YaHei, Arial",
-    "fontSize": "20px",
-    "lineColor": "#546E7A",
-    "textColor": "#263238"
   }
 }}%%
 
@@ -53,11 +54,13 @@ flowchart LR
   classDef extra  fill:#90A4AE,stroke:#37474F,stroke-width:2px,color:#FFFFFF,font-weight:700
   classDef hub    fill:#FFFFFF,stroke:#90A4AE,stroke-width:2px,color:#546E7A
 
+  %% 让大框/子图框也不铺底色（避免白底）
+  classDef frame fill:transparent,stroke:#90A4AE,stroke-width:2px,color:#263238
+
   %% ====== One big frame ======
   subgraph ALL[Python 学习路线图]
     direction LR
 
-    %% ---- Column 1: 基础层 ----
     subgraph L1[基础层]
       direction TB
       A["01｜Python 核心语法"]
@@ -65,7 +68,6 @@ flowchart LR
     end
     class A,B core
 
-    %% ---- Column 2: 进阶 & 前端 ----
     subgraph L2[能力进阶]
       direction TB
       C["02｜Python 语法进阶"]
@@ -74,7 +76,6 @@ flowchart LR
     class C adv
     class D fe
 
-    %% ---- Column 3: 方向模块 ----
     subgraph L3[方向模块]
       direction TB
 
@@ -93,19 +94,19 @@ flowchart LR
       class G,H web
     end
 
-    %% ---- Column 4: 思维工具 ----
     subgraph L4[思维工具]
       direction TB
       I["Python<br/>思维导图"]
     end
     class I extra
 
-    %% ====== Hubs ======
+    %% 给这些 subgraph 框套透明底样式（可选，但很常用）
+    class ALL,L1,L2,L3,L4,S1,S2 frame
+
     X(( ))
     Y(( ))
     class X,Y hub
 
-    %% ====== Connections ======
     A --> X
     B --> X
     X --> C
@@ -121,6 +122,7 @@ flowchart LR
 
     A -.-> I
   end
+
 
 ```
 
