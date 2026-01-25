@@ -1,165 +1,107 @@
-﻿# Python学习笔记
+# Python Notes
 
-<p>
-  <img src="https://img.shields.io/badge/Python-Notes-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Format-Markdown-000000?logo=markdown&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Learning-2ea44f" />
-  <img src="https://img.shields.io/badge/Focus-Web%20%26%20Spider-ff8c00" />
-</p>
+> 一个结构清晰、可持续迭代的 Python 学习资料库。覆盖基础语法 → 进阶能力 → Web/爬虫方向 → 框架实战，并配套练习题与思维导图，适合作为个人知识库与系统复习手册。
 
+---
 
-本仓库整理了从 Python 基础语法、进阶语法、前端补充，到爬虫、Django、Flask/微信小程序等方向的学习资料与练习题，适合作为系统化复习与查阅的本地知识库。
+## ✨ 项目简介
 
-## 快速入口 🔎
+本仓库整理了 Python 学习过程中的笔记、课件与练习资料，内容涵盖：
 
-- [Python核心语法](01-python核心语法/) 🧩
-- [Python语法进阶](02-Python语法进阶/)
-- [前端补充](02-前端补充/) 🎨
-- [爬虫课件](03-爬虫课件/) 🕷️
-- [Django课件](04-Django/) 🌿
-- [Flask与微信小程序](05-flask与微信小程序/) 🧪
-- [爬虫进阶](06-爬虫进阶/) 🚀（含专题概览：[06-爬虫进阶/README.md](06-爬虫进阶/README.md)）
-- [Python思维导图](Python思维导图/) 🧠
-- [练习题](练习题/) ✅
+- Python 基础与核心语法
+- Python 进阶（面向对象 / 并发 / 网络编程 / MySQL）
+- 前端补充（HTML / CSS / JavaScript / Ajax）
+- 爬虫入门与进阶（requests / XPath / 反爬 / 加密等）
+- Web 框架（Django / Flask / 微信小程序）
+- 练习题与阶段复盘资料
 
+目标是将学习路径**模块化、结构化、可查阅**，便于快速定位知识点并持续迭代。
 
-## 仓库整体概览 🗺️
+---
 
-```mermaid
-%%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "background": "transparent",
-    "fontFamily": "Inter, PingFang SC, Microsoft YaHei, Arial",
-    "fontSize": "20px",
-    "lineColor": "#546E7A",
-    "textColor": "#263238"
-  },
-  "flowchart": {
-    "curve": "linear",
-    "nodeSpacing": 30,
-    "rankSpacing": 42,
-    "padding": 10
-  }
-}}%%
+## 📚 快速导航
 
-flowchart LR
+| 模块 | 内容 | 入口 |
+|------|------|------|
+| Python 基础 | 变量、数据类型、流程控制、函数、文件、模块等 | [01-python核心语法](01-python核心语法/) |
+| Python 进阶 | OOP、异常、网络、并发、MySQL | [02-Python语法进阶](02-Python语法进阶/) |
+| 前端补充 | HTML/CSS/JS、DOM/BOM、Ajax | [02-前端补充](02-前端补充/) |
+| 爬虫入门 | requests、正则、BS4、XPath、反爬等 | [03-爬虫课件](03-爬虫课件/) |
+| Django | Django + Linux 相关课件 | [04-Django](04-Django/) |
+| Flask / 小程序 | Flask 与微信小程序课件 | [05-flask与微信小程序](05-flask与微信小程序/) |
+| 爬虫进阶 | 抓包、Appium、异步、加密、项目实战 | [06-爬虫进阶](06-爬虫进阶/) |
+| 专题概览 | 爬虫进阶模块总览 | [06-爬虫进阶/README.md](06-爬虫进阶/README.md) |
+| 思维导图 | Python 体系结构图 | [Python思维导图](Python思维导图/) |
+| 练习题 | 基础题 / 周练习 / 综合练习 | [练习题](练习题/) |
 
-  %% ====== Styles ======
-  classDef core   fill:#26A69A,stroke:#00695C,stroke-width:2px,color:#FFFFFF,font-weight:700
-  classDef adv    fill:#42A5F5,stroke:#1565C0,stroke-width:2px,color:#FFFFFF,font-weight:700
-  classDef fe     fill:#AB47BC,stroke:#6A1B9A,stroke-width:2px,color:#FFFFFF,font-weight:700
-  classDef spider fill:#FFCA28,stroke:#F57F17,stroke-width:2px,color:#263238,font-weight:700
-  classDef web    fill:#FF7043,stroke:#BF360C,stroke-width:2px,color:#FFFFFF,font-weight:700
-  classDef extra  fill:#90A4AE,stroke:#37474F,stroke-width:2px,color:#FFFFFF,font-weight:700
-  classDef hub    fill:#FFFFFF,stroke:#90A4AE,stroke-width:2px,color:#546E7A
+---
 
-  %% 让大框/子图框也不铺底色（避免白底）
-  classDef frame fill:transparent,stroke:#90A4AE,stroke-width:2px,color:#263238
+## 🧭 推荐学习路线
 
-  %% ====== One big frame ======
-  subgraph ALL[Python 学习路线图]
-    direction LR
+如果你希望按「从零到实战」的顺序学习，建议如下：
 
-    subgraph L1[基础层]
-      direction TB
-      A["01｜Python 核心语法"]
-      B["练习题<br/>（配套）"]
-    end
-    class A,B core
+1. **Python 基础**：从 `01-python核心语法/` 打牢语法与常用数据结构  
+2. **Python 进阶**：进入 `02-Python语法进阶/`，掌握 OOP / 异常 / 网络 / 并发  
+3. **按方向扩展**  
+   - Web/框架方向：`04-Django/` 或 `05-flask与微信小程序/`  
+   - 爬虫方向：`03-爬虫课件/` → `06-爬虫进阶/`  
+4. **阶段复盘**：结合 `练习题/` 做训练与总结输出  
 
-    subgraph L2[能力进阶]
-      direction TB
-      C["02｜Python 语法进阶"]
-      D["02｜前端补充"]
-    end
-    class C adv
-    class D fe
+---
 
-    subgraph L3[方向模块]
-      direction TB
+## 📂 目录结构说明
 
-      subgraph S1[爬虫学习]
-        direction TB
-        E["03｜爬虫课件"]
-        F["06｜爬虫进阶"]
-      end
-      class E,F spider
+```text
+.
+├── 01-python核心语法/           # Python 基础语法与核心知识点
+├── 02-Python语法进阶/           # 面向对象 / 异常 / 网络 / 并发 / MySQL
+├── 02-前端补充/                 # HTML/CSS/JS、DOM、Ajax 等
+├── 03-爬虫课件/                 # 爬虫入门：requests、解析、反爬等
+├── 04-Django/                   # Django + Linux 相关课件
+├── 05-flask与微信小程序/         # Flask 与微信小程序相关资料
+├── 06-爬虫进阶/                 # 抓包、异步、加密、项目实战等
+├── Python思维导图/              # 思维导图（压缩包）
+└── 练习题/                      # 基础题 / 周练 / 综合练习
+````
 
-      subgraph S2[Web 框架]
-        direction TB
-        G["04｜Django"]
-        H["05｜Flask<br/>与微信小程序"]
-      end
-      class G,H web
-    end
+---
 
-    subgraph L4[思维工具]
-      direction TB
-      I["Python<br/>思维导图"]
-    end
-    class I extra
+## ✍️ 练习题入口
 
-    %% 给这些 subgraph 框套透明底样式（可选，但很常用）
-    class ALL,L1,L2,L3,L4,S1,S2 frame
+* [python基础题.md](练习题/python基础题.md)
+* [第一周练习.txt](练习题/第一周练习.txt)
+* [第二周练习.txt](练习题/第二周练习.txt)
+* [综合练习.txt](练习题/综合练习.txt)
 
-    X(( ))
-    Y(( ))
-    class X,Y hub
+---
 
-    A --> X
-    B --> X
-    X --> C
+## 🚀 使用方式
 
-    C --> Y
-    Y --> E
-    E --> F
+* 建议按目录顺序学习，每个目录即一个阶段模块
+* Markdown 笔记适合边学边练，PDF 课件适合系统阅读
+* 推荐每学完一个模块后，立刻完成对应练习题进行巩固
 
-    Y --> G
-    Y --> H
-    D --> G
-    D --> H
+---
 
-    A -.-> I
-  end
+## 🔍 查找建议
 
+当仓库内容变多后，建议使用以下方式快速定位：
 
-```
+* 使用 IDE 全局搜索（关键词 / 函数名 / 概念名）
+* 按目录模块定位（基础 / 进阶 / 爬虫 / 框架）
+* 结合文件名与章节编号进行学习回溯
 
-## 目录结构说明 🧭
+---
 
-- `01-python核心语法/`：变量、数据类型、流程控制、函数、作用域、装饰器、迭代器、文件操作、模块与包等。
-- `02-Python语法进阶/`：面向对象、异常、网络编程、并发编程、MySQL 基础与进阶。
-- `02-前端补充/`：HTML/CSS/JavaScript 基础、DOM/BOM、jQuery、Ajax 与常见布局。
-- `03-爬虫课件/`：爬虫入门与进阶课件（requests、正则、BS4、XPath、反爬、验证码等）。
-- `04-Django/`：Django 与 Linux 相关 PDF 课件（基础、进阶、高级、项目开发）。
-- `05-flask与微信小程序/`：Flask 课件与微信小程序基础/进阶/项目扩展 PDF。
-- `06-爬虫进阶/`：抓包工具、Appium、Asyncpy、加密与爬虫项目实战。
-- `Python思维导图/`：Python 编程思维导图（`*.rar`）。
-- `练习题/`：基础练习与综合题（`*.md`/`*.txt`）。
+## 📌 说明
 
-## 练习题入口 ✍️
+* 本仓库为个人学习资料整理与沉淀，内容可能持续更新与优化
+* 目录中包含 Markdown / PDF / 压缩包等附件，请尽量保持结构不变
+* 如用于二次整理或分享，建议保留原始目录层级以保证可读性
 
-- [python基础题.md](练习题/python基础题.md)
-- [第一周练习.txt](练习题/第一周练习.txt)
-- [第二周练习.txt](练习题/第二周练习.txt)
-- [综合练习.txt](练习题/综合练习.txt)
+---
 
-## 学习路径建议 🧠
+## ⭐ 如果它对你有帮助
 
-1. 先完成 `01-python核心语法/`，打牢语法与数据结构基础。
-2. 进入 `02-Python语法进阶/`，理解面向对象、异常、网络与并发。
-3. 如有 Web/前端需求，再看 `02-前端补充/`。
-4. 对爬虫感兴趣，可按 `03-爬虫课件/` → `06-爬虫进阶/` 进阶。
-5. Web 框架方向：`04-Django/` 或 `05-flask与微信小程序/`。
+欢迎 Star / Fork 用作你的个人学习资料库，并持续迭代成自己的知识体系 ✨
 
-## 使用方式 📌
-
-- 以目录为课程单元，按文件序号学习即可。
-- Markdown 笔记适合边看边练；PDF 课件可作为体系化阅读材料。
-- 建议配合 `练习题/` 做阶段性练习与复盘。
-
-## 说明 ℹ️
-
-- 本仓库为学习资料合集，包含图片、PDF、RAR 等附件，请保持目录结构不变。
-- 若需要快速定位主题，可使用本地搜索（按关键词或文件名）。
